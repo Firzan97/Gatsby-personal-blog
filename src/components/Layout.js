@@ -5,9 +5,10 @@ import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 const Layout = ({ children }) => {
   return (
-    <>
-      <h2>layout component</h2>
-    </>
+    <div>
+      <Navbar />
+      <h2>{children}</h2>
+    </div>
   )
 }
 
