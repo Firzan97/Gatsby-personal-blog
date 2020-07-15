@@ -512,7 +512,9 @@ Services
 .service p {
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  font-size: large;
 }
+
 .service:hover {
   background: var(--clr-primary-5);
   color: var(--clr-primary-9);
