@@ -799,6 +799,7 @@ Blog
   margin-bottom: 0;
   font-weight: bold;
   color: var(--clr-grey-5);
+  font-size: 0.9rem;
 }
 .blog-footer p:first-of-type {
   display: inline-block;
@@ -1042,7 +1043,7 @@ Blog Template
   border-radius: var(--radius);
 }
 .blog-template img {
-  width: 15rem;
-  height: 15rem;
+  width: 20rem;
+  height: 20rem;
   margin: 3rem 0;
 }

@@ -7,7 +7,7 @@ import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
 
-export const query = graphql`
+export const query1 = graphql`
   {
     allStrapiProjects(filter: {feature: {eq: true}}) {
       nodes {
@@ -30,17 +30,38 @@ export const query = graphql`
         }
       }
     }
+    allStrapiBlogs(sort: {fields: created_at, order: DESC}) {
+      nodes {
+        content
+        id
+        slug
+        title
+        category
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        created_at(formatString: "MMM Do, YYYY")
+        desc
+      }
+    }
   }
 `
 
 export default ({ data }) => {
-  const { allStrapiProjects: { nodes: projects }, } = data
+  const { allStrapiProjects: { nodes: projects },
+    allStrapiBlogs: { nodes: blogs } } = data
+
   return (<div>
     <Layout>
       <Hero />
       <Services />
       <Jobs />
       <Projects projects={projects} title=" projects kawe" showLink />
+      <Blogs blogs={blogs} title="All Blog" showLink />
     </Layout>
   </div>)
 
