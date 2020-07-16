@@ -3,7 +3,7 @@ import Title from "./Title"
 import Project from "./Project"
 import { Link } from "gatsby"
 const Projects = () => {
-  return <h2>projects list</h2>
+  return <Title title="Featured Projects" />
 }
 
 export default Projects
