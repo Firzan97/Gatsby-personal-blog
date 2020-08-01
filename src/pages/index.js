@@ -6,6 +6,8 @@ import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
+import SEO from '../components/SEO'
+
 
 export const query1 = graphql`
   {
@@ -57,6 +59,7 @@ export default ({ data }) => {
 
   return (<div>
     <Layout>
+      <SEO title="home" description="This is my home page" />
       <Hero />
       <Services />
       <Jobs />
