@@ -59,11 +59,11 @@ export default ({ data }) => {
 
   return (<div>
     <Layout>
-      <SEO title="home" description="This is my home page" />
+      <SEO title="Home" description="This is my home page" />
       <Hero />
       <Services />
       <Jobs />
-      <Projects projects={projects} title=" projects kawe" showLink />
+      <Projects projects={projects} title=" My Projects" showLink />
       <Blogs blogs={blogs} title="All Blog" showLink />
     </Layout>
   </div>)

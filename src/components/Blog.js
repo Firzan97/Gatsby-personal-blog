@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
+
 const Blog = ({ content, id, slug, title, category, image, desc, created_at }) => {
   return <Link to={`/blogs/${slug}`} key={id}>
     <article className="blog">
